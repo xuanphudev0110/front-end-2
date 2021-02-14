@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
 function CustomAvatar() {
   const classes = useStyles();
   return (
-    <Link to="/">
+    <Link to="/front-end-2">
       <CardMedia
         component="img"
         src={avatar}

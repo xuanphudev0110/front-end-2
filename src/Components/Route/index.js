@@ -25,6 +25,9 @@ class Routing extends React.Component {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/front-end-2">
+              <Home />
+            </Route>
             <Route exact path="/accessories">
               <Accessories />
             </Route>
