@@ -23,32 +23,30 @@ function NikeList() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.title.substr(0, 4) === "Nike" &&
-                  product.type === "Shoes"
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product =>
+                    product.title.substr(0, 4) === "Nike" &&
+                    product.type === "Shoes"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.title.substr(0, 4) === "Nike" &&
-                  index > 29 &&
-                  index < 33
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 4) === "Nike" &&
+                    index > 29 &&
+                    index < 33
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

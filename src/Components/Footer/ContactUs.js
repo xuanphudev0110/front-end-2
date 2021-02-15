@@ -5,7 +5,7 @@ import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import AddAlertIcon from "@material-ui/icons/AddAlert";
 import { makeStyles } from "@material-ui/core/styles";
-import { Typography, Box } from "@material-ui/core";
+import Box from "@material-ui/core/Box";
 import orange from "@material-ui/core/colors/orange";
 import { ColorTextTypography } from "../../Core/TypographyColor";
 

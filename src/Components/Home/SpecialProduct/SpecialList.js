@@ -9,13 +9,11 @@ function SpecialList() {
       <Grid container spacing={2}>
         <ProductConsumer>
           {value => {
-            console.log(value.products);
-            return value.products.map(product => {
-              // console.log(product.title.substr(0, 7) === "Glasses");
-              if (product.special === true) {
-                return <ProductList key={product.id} product={product} />;
-              }
-            });
+            return value.products
+              .filter(product => product.special === true)
+              .map(product => (
+                <ProductList key={product.id} product={product} />
+              ));
           }}
         </ProductConsumer>
       </Grid>

@@ -7,12 +7,12 @@ import { Container, Button, Typography, Grid, Box } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   gridReverse: {
     marginBottom: theme.spacing(2),
-    ["@media (max-width:400px)"]: {
+    [theme.breakpoints.down("xs")]: {
       flexDirection: "column-reverse"
     }
   },
   btnReverse: {
-    ["@media (max-width:400px)"]: {
+    [theme.breakpoints.down("xs")]: {
       marginBottom: theme.spacing(2)
     }
   },

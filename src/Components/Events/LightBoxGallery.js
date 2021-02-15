@@ -2,7 +2,7 @@ import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid, CardMedia, Box, Typography } from "@material-ui/core";
+import { Grid, CardMedia } from "@material-ui/core";
 import { photos } from "../../Data/events";
 import content from "../../Files/Images/bg-content.png";
 import icon from "../../Files/Images/icon/title-icon.png";

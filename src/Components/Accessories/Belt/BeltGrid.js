@@ -23,28 +23,28 @@ export default function BeltGrid() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.title.substr(0, 4) === "Belt") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(product => product.title.substr(0, 4) === "Belt")
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                if (
-                  product.title.substr(0, 4) === "Belt" &&
-                  index > 8 &&
-                  index < 12
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 4) === "Belt" &&
+                    index > 8 &&
+                    index < 12
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

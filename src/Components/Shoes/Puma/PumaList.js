@@ -23,32 +23,30 @@ function PumaList() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.title.substr(0, 4) === "Puma" &&
-                  product.type === "Shoes"
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product =>
+                    product.title.substr(0, 4) === "Puma" &&
+                    product.type === "Shoes"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.title.substr(0, 4) === "Puma" &&
-                  index > 39 &&
-                  index < 43
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 4) === "Puma" &&
+                    index > 39 &&
+                    index < 43
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

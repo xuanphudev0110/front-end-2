@@ -11,60 +11,62 @@ function FilterList({ price1, price2, price3, price4 }) {
         {price1 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.price < 15 && product.type === "Accessories") {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(
+                  product =>
+                    product.price < 15 && product.type === "Accessories"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}
         {price2 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.price >= 15 &&
-                  product.price <= 30 &&
-                  product.type === "Accessories"
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(
+                  product =>
+                    product.price >= 15 &&
+                    product.price <= 30 &&
+                    product.type === "Accessories"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}
         {price3 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.price > 30 &&
-                  product.price <= 50 &&
-                  product.type === "Accessories"
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product =>
+                    product.price > 30 &&
+                    product.price <= 50 &&
+                    product.type === "Accessories"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}
         {price4 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.price > 50 && product.type === "Accessories") {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product =>
+                    product.price > 50 && product.type === "Accessories"
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

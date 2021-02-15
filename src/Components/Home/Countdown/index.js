@@ -1,6 +1,5 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
-import banner from "../../../Files/Images/bg-countdown.jpg";
 import {
   Grid,
   Box,
@@ -16,6 +15,7 @@ import {
 } from "../../../Core/TypographyColor";
 import icon from "../../../Files/Images/icon/title-icon.png";
 import { ColorButtonNormal } from "../../../Core/ButtonOrange";
+import banner from "../../../Files/Images/bg-countdown.jpg";
 
 const styles = theme => ({
   root: {

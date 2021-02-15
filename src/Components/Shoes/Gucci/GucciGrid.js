@@ -23,27 +23,26 @@ export default function GucciGrid() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map(product => {
-                if (product.title.substr(0, 5) === "Gucci") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(product => product.title.substr(0, 5) === "Gucci")
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map((product, index) => {
-                if (
-                  product.title.substr(0, 5) === "Gucci" &&
-                  index > 45 &&
-                  index < 49
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 5) === "Gucci" &&
+                    index > 45 &&
+                    index < 49
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

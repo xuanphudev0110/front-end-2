@@ -9,12 +9,11 @@ export default function NikeGrid() {
       <Grid container spacing={2}>
         <ProductConsumer>
           {value => {
-            // console.log(value.products);
-            return value.products.map(product => {
-              if (product.title.substr(0, 4) === "Nike") {
-                return <ProductGrid key={product.id} product={product} />;
-              }
-            });
+            return value.products
+              .filter(product => product.title.substr(0, 4) === "Nike")
+              .map(product => (
+                <ProductGrid key={product.id} product={product} />
+              ));
           }}
         </ProductConsumer>
       </Grid>

@@ -9,18 +9,15 @@ export default function SpecialGrid() {
       <Grid container spacing={2}>
         <ProductConsumer>
           {value => {
-            // console.log(value.products);
-            return value.products.map(product => {
-              if (product.special === true) {
-                return (
-                  <ProductGrid
-                    gridOveriew={{ xs: 12, sm: 6, md: 4, lg: 3 }}
-                    key={product.id}
-                    product={product}
-                  />
-                );
-              }
-            });
+            return value.products
+              .filter(product => product.special === true)
+              .map(product => (
+                <ProductGrid
+                  gridOveriew={{ xs: 12, sm: 6, md: 4, lg: 3 }}
+                  key={product.id}
+                  product={product}
+                />
+              ));
           }}
         </ProductConsumer>
       </Grid>

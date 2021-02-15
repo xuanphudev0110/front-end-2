@@ -30,6 +30,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "eslint:disable": "REACT_APP_DEV_DISABLE_ESLINT=true",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

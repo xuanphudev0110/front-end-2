@@ -11,39 +11,37 @@ export default function FilterByStarGrid({ star1, star2, star3 }) {
         {star1 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.star < 4 && product.type === "Shoes") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(product => product.star < 4 && product.type === "Shoes")
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}
         {star2 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.star === 4 && product.type === "Shoes") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product => product.star === 4 && product.type === "Shoes"
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}
         {star3 && (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.star === 5 && product.type === "Shoes") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product => product.star === 5 && product.type === "Shoes"
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

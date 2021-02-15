@@ -23,30 +23,30 @@ export default function AdidasGrid() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map(product => {
-                if (
-                  product.title.substr(0, 6) === "Adidas" &&
-                  product.type === "Shoes"
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  product =>
+                    product.title.substr(0, 6) === "Adidas" &&
+                    product.type === "Shoes"
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map((product, index) => {
-                if (
-                  product.title.substr(0, 6) === "Adidas" &&
-                  index > 34 &&
-                  index < 38
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 6) === "Adidas" &&
+                    index > 34 &&
+                    index < 38
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

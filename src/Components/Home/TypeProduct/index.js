@@ -60,40 +60,49 @@ const gridData = [
   },
   {
     img: logo2,
-    title: "Apple"
+    title: "Apple",
+    link: "front-end-2"
   },
   {
     img: logo3,
-    title: "Balance"
+    title: "Balance",
+    link: "front-end-2"
   },
   {
     img: logo4,
-    title: "Dior"
+    title: "Dior",
+    link: "front-end-2"
   },
   {
     img: logo5,
-    title: "Yoga"
+    title: "Yoga",
+    link: "front-end-2"
   },
   {
     img: logo6,
-    title: "Gucci"
+    title: "Gucci",
+    link: "front-end-2"
   },
   {
     img: logo7,
-    title: "Jeans"
+    title: "Jeans",
+    link: "front-end-2"
   },
   {
     img: logo8,
-    title: "Kaki"
+    title: "Kaki",
+    link: "front-end-2"
   },
   {
     img: logo9,
-    title: "Levi's"
+    title: "Levi's",
+    link: "front-end-2"
   },
 
   {
     img: logo12,
-    title: "Rolex"
+    title: "Rolex",
+    link: "front-end-2"
   }
 ];
 

@@ -4,7 +4,6 @@ import LocationOnIcon from "@material-ui/icons/LocationOn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import {
-  Box,
   Typography,
   Link,
   Grid,
@@ -35,7 +34,6 @@ const useStyles = makeStyles(theme => ({
     background: `rgba(6, 12, 34, 0.76)`,
     position: "absolute",
     left: 0,
-    bottom: 5,
     right: 0,
     bottom: -35,
     textAlign: "center",

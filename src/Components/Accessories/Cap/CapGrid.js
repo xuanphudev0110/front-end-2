@@ -23,28 +23,28 @@ export default function CapGrid() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.title.substr(0, 3) === "Cap") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(product => product.title.substr(0, 3) === "Cap")
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                if (
-                  product.title.substr(0, 3) === "Cap" &&
-                  index > 4 &&
-                  index < 8
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              // console.log(value.products);
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 3) === "Cap" &&
+                    index > 4 &&
+                    index < 8
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

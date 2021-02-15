@@ -22,28 +22,25 @@ class Routing extends React.Component {
         <BrowserRouter>
           <Menu />
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
             <Route exact path="/front-end-2">
               <Home />
             </Route>
-            <Route exact path="/accessories">
+            <Route path="/accessories">
               <Accessories />
             </Route>
-            <Route exact path="/adidas">
+            <Route path="/adidas">
               <Adidas />
             </Route>
-            <Route exact path="/nike">
+            <Route path="/nike">
               <Nike />
             </Route>
-            <Route exact path="/puma">
+            <Route path="/puma">
               <Puma />
             </Route>
-            <Route exact path="/shoes">
+            <Route path="/shoes">
               <Shoes />
             </Route>
-            <Route exact path="/clothes">
+            <Route path="/clothes">
               <Clothes />
             </Route>
             <Route path="/detail">

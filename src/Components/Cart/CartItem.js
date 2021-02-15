@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   cardHeader: {
     position: "relative",
-    ["@media (max-width:500px)"]: {
+    [theme.breakpoints.down("xs")]: {
       flexDirection: "column"
     }
   },

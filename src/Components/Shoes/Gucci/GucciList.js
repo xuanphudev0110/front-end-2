@@ -23,29 +23,26 @@ function GucciList() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map(product => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.title.substr(0, 5) === "Gucci") {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(product => product.title.substr(0, 5) === "Gucci")
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (
-                  product.title.substr(0, 5) === "Gucci" &&
-                  index > 45 &&
-                  index < 49
-                ) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 5) === "Gucci" &&
+                    index > 45 &&
+                    index < 49
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

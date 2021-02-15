@@ -23,27 +23,26 @@ export default function BalanceGrid() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map(product => {
-                if (product.title.substr(0, 7) === "Balance") {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(product => product.title.substr(0, 7) === "Balance")
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              // console.log(value.products);
-              return value.products.map((product, index) => {
-                if (
-                  product.title.substr(0, 7) === "Balance" &&
-                  index > 50 &&
-                  index < 54
-                ) {
-                  return <ProductGrid key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, index) =>
+                    product.title.substr(0, 7) === "Balance" &&
+                    index > 50 &&
+                    index < 54
+                )
+                .map(product => (
+                  <ProductGrid key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

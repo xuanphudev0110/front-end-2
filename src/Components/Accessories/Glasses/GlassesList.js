@@ -23,25 +23,24 @@ function GlassesList() {
         {open === true ? (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.title.substr(0, 7) === "Glasses") {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(product => product.title.substr(0, 7) === "Glasses")
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         ) : (
           <ProductConsumer>
             {value => {
-              console.log(value.products);
-              return value.products.map((product, index) => {
-                // console.log(product.title.substr(0, 7) === "Glasses");
-                if (product.title.substr(0, 7) === "Glasses" && index < 3) {
-                  return <ProductList key={product.id} product={product} />;
-                }
-              });
+              return value.products
+                .filter(
+                  (product, idx) =>
+                    product.title.substr(0, 7) === "Glasses" && idx < 3
+                )
+                .map(product => (
+                  <ProductList key={product.id} product={product} />
+                ));
             }}
           </ProductConsumer>
         )}

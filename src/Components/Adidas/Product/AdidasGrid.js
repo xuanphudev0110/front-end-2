@@ -10,11 +10,11 @@ export default function AdidasGrid() {
         <ProductConsumer>
           {value => {
             // console.log(value.products);
-            return value.products.map(product => {
-              if (product.title.substr(0, 6) === "Adidas") {
-                return <ProductGrid key={product.id} product={product} />;
-              }
-            });
+            return value.products
+              .filter(product => product.title.substr(0, 6) === "Adidas")
+              .map(product => (
+                <ProductGrid key={product.id} product={product} />
+              ));
           }}
         </ProductConsumer>
       </Grid>
