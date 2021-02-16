@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Home from "../Home";
 import About from "../About";
 import Menu from "../Navbar";
@@ -25,6 +25,13 @@ class Routing extends React.Component {
             <Route exact path="/front-end-2">
               <Home />
             </Route>
+            <Route
+              exact
+              path={"/"}
+              render={() => {
+                return <Redirect to={"/front-end-2"} />;
+              }}
+            />
             <Route path="/accessories">
               <Accessories />
             </Route>

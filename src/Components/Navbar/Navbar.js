@@ -144,30 +144,32 @@ class Navbar extends Component {
   destroyDrawer() {
     const { classes } = this.props;
     return (
-      <AppBar style={{ background: "#252525" }}>
-        <Container maxWidth="lg">
-          <Toolbar style={{ padding: 0 }}>
-            <CustomAvatar />
-            {pages.map(item => (
-              <Typography
-                color="inherit"
-                className={classes.padding}
-                key={item.key}
-              >
-                <Link
-                  to={`/${item.name
-                    .toLocaleLowerCase()
-                    .split(" ")
-                    .join("")}`}
+      <React.Fragment>
+        <AppBar style={{ background: "#252525" }}>
+          <Container maxWidth="lg">
+            <Toolbar style={{ padding: 0 }}>
+              <CustomAvatar />
+              {pages.map(item => (
+                <Typography
+                  color="inherit"
+                  className={classes.padding}
+                  key={item.key}
                 >
-                  {item.icon}
-                  {item.name}
-                </Link>
-              </Typography>
-            ))}
-          </Toolbar>
-        </Container>
-      </AppBar>
+                  <Link
+                    to={`/${item.name
+                      .toLocaleLowerCase()
+                      .split(" ")
+                      .join("")}`}
+                  >
+                    {item.icon}
+                    {item.name}
+                  </Link>
+                </Typography>
+              ))}
+            </Toolbar>
+          </Container>
+        </AppBar>
+      </React.Fragment>
     );
   }
 

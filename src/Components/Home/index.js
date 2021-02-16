@@ -10,6 +10,8 @@ import BestSelling from "./BestSelling";
 import SpecialProduct from "./SpecialProduct";
 import SliderProduct from "../General/SliderProduct";
 import NewProduct from "./NewProduct";
+import Popup from "./Popup";
+import Loading from "../General/Loading";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -21,7 +23,14 @@ const useStyles = makeStyles(theme => ({
 
 function Home() {
   const classes = useStyles();
-  return (
+  const [showLoading, setShowLoading] = React.useState(false);
+  const modalTimer = React.useRef(null);
+
+  React.useEffect(() => {
+    modalTimer.current = setTimeout(() => setShowLoading(true), 2000);
+  }, []);
+
+  return showLoading ? (
     <React.Fragment>
       <Container maxWidth="lg">
         <div className={classes.autoMb}>
@@ -32,11 +41,14 @@ function Home() {
           <BestSelling />
           <SpecialProduct />
           <SliderProduct />
+          <Popup />
           <Service />
         </div>
       </Container>
       <Newletter />
     </React.Fragment>
+  ) : (
+    <Loading />
   );
 }
 
