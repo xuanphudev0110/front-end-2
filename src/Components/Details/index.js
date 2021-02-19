@@ -4,6 +4,8 @@ import DetailProduct from "./DetailProduct";
 import RandomProduct from "./RandomProduct";
 import Loading from "../General/Loading";
 import InformationProduct from "./InformationProduct";
+import Review from "./Review";
+import Tutorial from "./Tutorial";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -27,6 +29,8 @@ export default function Detail() {
       <div className={classes.autoMb}>
         <DetailProduct />
         <InformationProduct />
+        <Tutorial />
+        <Review />
         <RandomProduct />
       </div>
     </Container>

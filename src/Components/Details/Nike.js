@@ -7,7 +7,8 @@ import {
   ListItem,
   ListItemAvatar,
   Avatar,
-  ListItemText
+  ListItemText,
+  ListItemSecondaryAction
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { ColorTextTypography } from "../../Core/TypographyColor";
@@ -48,7 +49,7 @@ function Nike() {
                     />
                   </ListItemAvatar>
                   <ListItemText
-                    secondary={
+                    primary={
                       <React.Fragment>
                         <Typography>
                           <b>{product.title}</b>
@@ -73,6 +74,111 @@ function Nike() {
               ));
           }}
         </ProductConsumer>
+      </List>
+      <Box mt={2} className={classes.bgTitle}>
+        <Typography style={{ fontSize: 18 }}>
+          <b>Categories</b>
+        </Typography>
+      </Box>
+      <List>
+        <ListItem divider dense>
+          <ListItemText primary="Nike" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#3f51b5"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>212</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Adidas" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#f50057"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>200</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Puma" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#8d00ff"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>198</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Jean" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#f44336"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>197</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Gucci" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#ff9800"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>192</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Apple Watch" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#2196f3"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>187</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
+        <ListItem divider dense>
+          <ListItemText primary="Balance" />
+          <ListItemSecondaryAction>
+            <Box
+              bgcolor="#4caf50"
+              py={0.3}
+              px={1}
+              color="#fff"
+              borderRadius={4}
+            >
+              <b>130</b>
+            </Box>
+          </ListItemSecondaryAction>
+        </ListItem>
       </List>
     </div>
   );

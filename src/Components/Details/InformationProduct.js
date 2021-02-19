@@ -2,7 +2,6 @@ import React from "react";
 import { Typography, Grid, CardMedia, Box, Button } from "@material-ui/core";
 import { orange } from "@material-ui/core/colors";
 import { makeStyles } from "@material-ui/core/styles";
-import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { ProductConsumer } from "../../Context";
 import Nike from "./Nike";
@@ -20,19 +19,20 @@ const useStyles = makeStyles(theme => ({
     height: "60%",
     margin: "0 auto"
   },
-  btnViewMore: {
-    textTransform: "none"
-  },
+
   formDetail: {
     position: "relative"
   },
   outstanding: {
     position: "absolute",
-    top: 30,
+    top: 50,
     left: "65%",
     background: orange[500],
     padding: "8px 16px",
     borderRadius: "20px"
+  },
+  btnViewMore: {
+    textTransform: "none"
   }
 }));
 
@@ -62,6 +62,17 @@ function InformationProduct() {
                   className={classes.img1}
                 />
                 <div className={classes.outstanding}>Outstanding</div>
+                {open === false && (
+                  <Button
+                    className={classes.btnViewMore}
+                    onClick={handleChange}
+                    color="primary"
+                    variant="outlined"
+                    endIcon={open === false ? <ExpandMoreIcon /> : ""}
+                  >
+                    {open === false ? <span>View More</span> : ""}
+                  </Button>
+                )}
               </div>
 
               {open === true && (
@@ -82,19 +93,6 @@ function InformationProduct() {
                   </div>
                 </React.Fragment>
               )}
-              <Box mt={1}>
-                <Button
-                  className={classes.btnViewMore}
-                  onClick={handleChange}
-                  color="primary"
-                  variant="outlined"
-                  endIcon={
-                    open === false ? <ExpandMoreIcon /> : <ExpandLessIcon />
-                  }
-                >
-                  {open === false ? <span>View More</span> : <span>Close</span>}
-                </Button>
-              </Box>
             </Grid>
             <Grid item md={4} xs={12}>
               <Nike />
