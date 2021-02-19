@@ -14,6 +14,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 const BorderLinearProgress = withStyles({
   root: {
     height: 10,
+    width: 300,
     borderRadius: 5
   },
   bar: {
@@ -90,26 +91,97 @@ function Review() {
                     </Box>
                   </Grid>
                   <Grid item md={4} sm={6} xs={12}>
-                    <Box textAlign="center">
-                      <Box mb={1}>
-                        5 <Rating name="readOnly" value={1} max={1} readOnly />
-                        <BorderLinearProgress
-                          variant="determinate"
-                          value={100}
-                        />
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      mb={1}
+                    >
+                      <Box display="flex" alignItems="flex-end">
+                        <Typography>5</Typography>
+                        <Rating name="readOnly" value={1} max={1} readOnly />
                       </Box>
-                      <Box mb={1}>
-                        <BorderLinearProgress variant="determinate" value={0} />
+                      <BorderLinearProgress
+                        variant="determinate"
+                        value={star === 5 ? 100 : 0}
+                      />
+                      <Typography color="textSecondary">
+                        {star === 5 ? "(20)" : <span>&nbsp;(0)</span>}
+                      </Typography>
+                    </Box>
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      mb={1}
+                    >
+                      <Box display="flex" alignItems="flex-end">
+                        <Typography>4</Typography>
+                        <Rating name="readOnly" value={1} max={1} readOnly />
                       </Box>
-                      <Box mb={1}>
-                        <BorderLinearProgress variant="determinate" value={0} />
+                      <BorderLinearProgress
+                        variant="determinate"
+                        value={star === 4 ? 100 : 0}
+                      />
+                      <Typography color="textSecondary">
+                        {" "}
+                        {star === 4 ? "(20)" : <span>&nbsp;(0)</span>}
+                      </Typography>
+                    </Box>
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      mb={1}
+                    >
+                      <Box display="flex" alignItems="flex-end">
+                        <Typography>3</Typography>
+                        <Rating name="readOnly" value={1} max={1} readOnly />
                       </Box>
-                      <Box mb={1}>
-                        <BorderLinearProgress variant="determinate" value={0} />
+                      <BorderLinearProgress
+                        variant="determinate"
+                        value={star === 3 ? 100 : 0}
+                      />
+                      <Typography color="textSecondary">
+                        {" "}
+                        {star === 3 ? "(20)" : <span>&nbsp;(0)</span>}
+                      </Typography>
+                    </Box>
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      mb={1}
+                    >
+                      <Box display="flex" alignItems="flex-end">
+                        <Typography>2</Typography>
+                        <Rating name="readOnly" value={1} max={1} readOnly />
                       </Box>
-                      <Box>
-                        <BorderLinearProgress variant="determinate" value={0} />
+                      <BorderLinearProgress
+                        variant="determinate"
+                        value={star === 2 ? 100 : 0}
+                      />
+                      <Typography color="textSecondary">
+                        {star === 2 ? "(20)" : <span>&nbsp;(0)</span>}
+                      </Typography>
+                    </Box>
+                    <Box
+                      display="flex"
+                      justifyContent="space-between"
+                      alignItems="center"
+                      mb={1}
+                    >
+                      <Box display="flex" alignItems="flex-end">
+                        <Typography>1</Typography>
+                        <Rating name="readOnly" value={1} max={1} readOnly />
                       </Box>
+                      <BorderLinearProgress
+                        variant="determinate"
+                        value={star === 1 ? 100 : 0}
+                      />
+                      <Typography color="textSecondary">
+                        {star === 1 ? "(20)" : <span>&nbsp;(0)</span>}
+                      </Typography>
                     </Box>
                   </Grid>
                   <Grid item md={4} sm={6} xs={12}>

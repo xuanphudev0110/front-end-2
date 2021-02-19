@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Box } from "@material-ui/core";
+import { Container, Box, CardMedia } from "@material-ui/core";
 import SliderAdvertisement from "./SliderAdvertisement";
 import { makeStyles } from "@material-ui/core";
 import Countdown from "./Countdown";
@@ -14,6 +14,8 @@ import Popup from "./Popup";
 import Loading from "../General/Loading";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+import bannerLeft from "../../Files/Images/banner_left.png";
+import bannerRight from "../../Files/Images/banner_right.png";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -23,6 +25,18 @@ const useStyles = makeStyles(theme => ({
   },
   iconBtn: {
     color: theme.palette.success.main
+  },
+  leftImg: {
+    position: "fixed",
+    left: 0,
+    top: 64,
+    width: 60
+  },
+  rightImg: {
+    position: "fixed",
+    right: 0,
+    top: 64,
+    width: 60
   }
 }));
 
@@ -40,7 +54,17 @@ function Home() {
   };
 
   return showLoading ? (
-    <React.Fragment>
+    <div className={classes.happyNewYear}>
+      <Box className={classes.leftImg}>
+        <CardMedia component="img" image={bannerLeft} />
+      </Box>
+      <Box>
+        <CardMedia
+          component="img"
+          image={bannerRight}
+          className={classes.rightImg}
+        />
+      </Box>
       <Container maxWidth="lg">
         <div className={classes.autoMb}>
           {open === true && (
@@ -70,7 +94,6 @@ function Home() {
               </Box>
             </Box>
           )}
-
           <SliderAdvertisement />
           <Countdown deadline="Jul, 15, 2021" />
           <TypeProduct />
@@ -83,7 +106,7 @@ function Home() {
         </div>
       </Container>
       <Newletter />
-    </React.Fragment>
+    </div>
   ) : (
     <Loading />
   );
