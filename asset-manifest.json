@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/front-end-2/static/css/main.44e1adc0.chunk.css",
-    "main.js": "/front-end-2/static/js/main.1c65f212.chunk.js",
-    "main.js.map": "/front-end-2/static/js/main.1c65f212.chunk.js.map",
-    "runtime-main.js": "/front-end-2/static/js/runtime-main.bba69b8e.js",
-    "runtime-main.js.map": "/front-end-2/static/js/runtime-main.bba69b8e.js.map",
+    "main.js": "/front-end-2/static/js/main.258099bf.chunk.js",
+    "main.js.map": "/front-end-2/static/js/main.258099bf.chunk.js.map",
+    "runtime-main.js": "/front-end-2/static/js/runtime-main.5fdf5abe.js",
+    "runtime-main.js.map": "/front-end-2/static/js/runtime-main.5fdf5abe.js.map",
     "static/css/2.49515cf7.chunk.css": "/front-end-2/static/css/2.49515cf7.chunk.css",
-    "static/js/2.9c26d250.chunk.js": "/front-end-2/static/js/2.9c26d250.chunk.js",
-    "static/js/2.9c26d250.chunk.js.map": "/front-end-2/static/js/2.9c26d250.chunk.js.map",
-    "static/js/3.1336fa36.chunk.js": "/front-end-2/static/js/3.1336fa36.chunk.js",
-    "static/js/3.1336fa36.chunk.js.map": "/front-end-2/static/js/3.1336fa36.chunk.js.map",
+    "static/js/2.0a438052.chunk.js": "/front-end-2/static/js/2.0a438052.chunk.js",
+    "static/js/2.0a438052.chunk.js.map": "/front-end-2/static/js/2.0a438052.chunk.js.map",
+    "static/js/3.9f43274e.chunk.js": "/front-end-2/static/js/3.9f43274e.chunk.js",
+    "static/js/3.9f43274e.chunk.js.map": "/front-end-2/static/js/3.9f43274e.chunk.js.map",
     "index.html": "/front-end-2/index.html",
     "static/css/2.49515cf7.chunk.css.map": "/front-end-2/static/css/2.49515cf7.chunk.css.map",
     "static/css/main.44e1adc0.chunk.css.map": "/front-end-2/static/css/main.44e1adc0.chunk.css.map",
-    "static/js/2.9c26d250.chunk.js.LICENSE.txt": "/front-end-2/static/js/2.9c26d250.chunk.js.LICENSE.txt",
+    "static/js/2.0a438052.chunk.js.LICENSE.txt": "/front-end-2/static/js/2.0a438052.chunk.js.LICENSE.txt",
     "static/media/1.2b3be528.jpg": "/front-end-2/static/media/1.2b3be528.jpg",
     "static/media/1.50fee1f1.jpg": "/front-end-2/static/media/1.50fee1f1.jpg",
     "static/media/1.a399c8d7.jpg": "/front-end-2/static/media/1.a399c8d7.jpg",
@@ -106,6 +106,8 @@
     "static/media/banner.d65156d9.jpg": "/front-end-2/static/media/banner.d65156d9.jpg",
     "static/media/banner1.4ab4b234.jpg": "/front-end-2/static/media/banner1.4ab4b234.jpg",
     "static/media/banner2.209488c5.jpg": "/front-end-2/static/media/banner2.209488c5.jpg",
+    "static/media/banner_left.7ba0d130.png": "/front-end-2/static/media/banner_left.7ba0d130.png",
+    "static/media/banner_right.741309ee.png": "/front-end-2/static/media/banner_right.741309ee.png",
     "static/media/bg-countdown.ce0028c7.jpg": "/front-end-2/static/media/bg-countdown.ce0028c7.jpg",
     "static/media/cart-empty.a42efd2c.png": "/front-end-2/static/media/cart-empty.a42efd2c.png",
     "static/media/company.fcc40b3a.jpg": "/front-end-2/static/media/company.fcc40b3a.jpg",
@@ -115,6 +117,10 @@
     "static/media/dior.5bea298e.jpg": "/front-end-2/static/media/dior.5bea298e.jpg",
     "static/media/event-bg2.8bd459b3.jpg": "/front-end-2/static/media/event-bg2.8bd459b3.jpg",
     "static/media/events.7bc82b2f.jpg": "/front-end-2/static/media/events.7bc82b2f.jpg",
+    "static/media/flower1.8da0d6e6.png": "/front-end-2/static/media/flower1.8da0d6e6.png",
+    "static/media/flower2.70486d0c.png": "/front-end-2/static/media/flower2.70486d0c.png",
+    "static/media/flower3.335095bb.png": "/front-end-2/static/media/flower3.335095bb.png",
+    "static/media/flower4.5205dc59.png": "/front-end-2/static/media/flower4.5205dc59.png",
     "static/media/gucci.ff090d40.jpg": "/front-end-2/static/media/gucci.ff090d40.jpg",
     "static/media/jeans.660d4edd.jpg": "/front-end-2/static/media/jeans.660d4edd.jpg",
     "static/media/levis.005f0954.png": "/front-end-2/static/media/levis.005f0954.png",
@@ -129,10 +135,10 @@
     "static/media/teamwork.3f5128ad.PNG": "/front-end-2/static/media/teamwork.3f5128ad.PNG"
   },
   "entrypoints": [
-    "static/js/runtime-main.bba69b8e.js",
+    "static/js/runtime-main.5fdf5abe.js",
     "static/css/2.49515cf7.chunk.css",
-    "static/js/2.9c26d250.chunk.js",
+    "static/js/2.0a438052.chunk.js",
     "static/css/main.44e1adc0.chunk.css",
-    "static/js/main.1c65f212.chunk.js"
+    "static/js/main.258099bf.chunk.js"
   ]
 }
