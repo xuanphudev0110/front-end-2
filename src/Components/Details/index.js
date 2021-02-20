@@ -6,6 +6,7 @@ import Loading from "../General/Loading";
 import InformationProduct from "./InformationProduct";
 import Review from "./Review";
 import Tutorial from "./Tutorial";
+import PostComponents from "./PostComments";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -31,6 +32,7 @@ export default function Detail() {
         <InformationProduct />
         <Tutorial />
         <Review />
+        <PostComponents />
         <RandomProduct />
       </div>
     </Container>
