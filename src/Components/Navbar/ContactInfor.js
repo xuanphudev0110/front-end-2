@@ -24,7 +24,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
     "&:hover": {
       background: theme.palette.grey[800],
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
+      boxShadow: `0 0 0 5px ${theme.palette.grey[300]}`
     }
   },
   facebook: {
@@ -33,7 +34,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
     "&:hover": {
       background: theme.palette.primary.main,
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
+      boxShadow: `0 0 0 5px ${theme.palette.grey[300]}`
     }
   },
   phone: {
@@ -42,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(1),
     "&:hover": {
       background: theme.palette.success.main,
-      color: theme.palette.common.white
+      color: theme.palette.common.white,
+      boxShadow: `0 0 0 5px ${theme.palette.grey[300]}`
     }
   }
 }));

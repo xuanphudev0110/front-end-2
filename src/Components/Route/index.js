@@ -71,24 +71,56 @@ const useStyles = makeStyles({
       animation: `$moveX 1s ease-in-out infinite alternate`
     },
     "&:nth-child(2)": {
-      animation: `$moveX 3s 1s ease-in-out infinite alternate`
+      animation: `$moveX2 3s 1s ease-in-out infinite alternate`
     },
     "&:nth-child(3)": {
-      animation: `$moveX 3s 2s ease-in-out infinite alternate`
+      animation: `$moveX3 3s 2s ease-in-out infinite alternate`
     },
     "&:nth-child(4)": {
-      animation: `$moveX 4s 1s ease-in-out infinite alternate`
+      animation: `$moveX4 4s 1s ease-in-out infinite alternate`
     },
     "&:nth-child(5)": {
-      animation: `$moveX 1s 2s ease-in-out infinite alternate`
+      animation: `$moveX5 1s 2s ease-in-out infinite alternate`
     },
     "&:nth-child(6)": {
-      animation: `$moveX 1s ease-in-out infinite alternate`
+      animation: `$moveX6 1s ease-in-out infinite alternate`
     }
   },
   "@keyframes moveX": {
     "0%": { transform: `translateX(0)` },
-    "100%": { transform: `translateX(60px)` }
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
+  },
+  "@keyframes moveX2": {
+    "0%": { transform: `translateX(0)` },
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
+  },
+  "@keyframes moveX3": {
+    "0%": { transform: `translateX(0)` },
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
+  },
+  "@keyframes moveX4": {
+    "0%": { transform: `translateX(0)` },
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
+  },
+  "@keyframes moveX5": {
+    "0%": { transform: `translateX(0)` },
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
+  },
+  "@keyframes moveX6": {
+    "0%": { transform: `translateX(0)` },
+    "100%": {
+      transform: `translateX(${Math.floor(Math.random() * (30 - 15) + 15)}px)`
+    }
   },
   "@keyframes moveY": {
     "0%": {
