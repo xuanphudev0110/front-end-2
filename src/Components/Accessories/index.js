@@ -20,6 +20,7 @@ import AutoComplete from "./AutoComplete";
 import Header from "./Header";
 import Rating from "@material-ui/lab/Rating";
 import SliderProduct from "../General/SliderProduct/index";
+import ServicesGeneral from "../General/Services";
 
 const useStyles = makeStyles(theme => ({
   bg: {
@@ -221,6 +222,7 @@ function Accessories() {
             </Grid>
           </Grid>
         </Box>
+        <ServicesGeneral />
       </Container>
     </React.Fragment>
   );

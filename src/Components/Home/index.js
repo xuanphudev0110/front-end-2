@@ -1,6 +1,8 @@
 import React from "react";
-import { Container, Box, CardMedia } from "@material-ui/core";
+import { Container, Box, CardMedia, Collapse } from "@material-ui/core";
+import { Alert, AlertTitle } from "@material-ui/lab";
 import SliderAdvertisement from "./SliderAdvertisement";
+import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core";
 import Countdown from "./Countdown";
 import Newletter from "../General/Newletter";
@@ -13,7 +15,6 @@ import NewProduct from "./NewProduct";
 import Popup from "./Popup";
 import Loading from "../General/Loading";
 import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
 import bannerLeft from "../../Files/Images/banner_left.png";
 import bannerRight from "../../Files/Images/banner_right.png";
 
@@ -52,6 +53,8 @@ function Home() {
   const handleChange = () => {
     setOpen(false);
   };
+
+  const [open2, setOpen2] = React.useState(true);
 
   return showLoading ? (
     <div className={classes.happyNewYear}>
@@ -97,6 +100,30 @@ function Home() {
           <SliderAdvertisement />
           <Countdown deadline="Jul, 15, 2021" />
           <TypeProduct />
+          <Collapse in={open2}>
+            <Alert
+              action={
+                <IconButton
+                  aria-label="close"
+                  color="inherit"
+                  onClick={() => {
+                    setOpen2(false);
+                  }}
+                >
+                  <CloseIcon fontSize="inherit" />
+                </IconButton>
+              }
+              severity="warning"
+            >
+              <AlertTitle>
+                <strong>Cancel orders easily</strong>
+              </AlertTitle>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam
+            </Alert>
+          </Collapse>
+
           <NewProduct />
           <BestSelling />
           <SpecialProduct />

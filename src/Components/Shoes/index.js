@@ -18,6 +18,7 @@ import Balance from "./Balance";
 import Header from "./Header";
 import FilterByStars from "./FilterByStars";
 import Filter from "./Filter";
+import ServicesGeneral from "../General/Services";
 
 const useStyles = makeStyles(theme => ({
   bg: {
@@ -223,6 +224,7 @@ function Shoes() {
             </Grid>
           </Grid>
         </Box>
+        <ServicesGeneral />
       </Container>
     </React.Fragment>
   );

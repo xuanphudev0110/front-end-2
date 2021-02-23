@@ -17,6 +17,7 @@ import Puma from "./Puma";
 import Jean from "./Jean";
 import Filter from "./Filter";
 import FilterByStars from "./FilterByStars";
+import ServicesGeneral from "../General/Services";
 
 const useStyles = makeStyles(theme => ({
   bg: {
@@ -216,6 +217,7 @@ function Clothes() {
             </Grid>
           </Grid>
         </Box>
+        <ServicesGeneral />
       </Container>
     </React.Fragment>
   );

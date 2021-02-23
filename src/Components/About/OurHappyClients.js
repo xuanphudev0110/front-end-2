@@ -5,6 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import content from "../../Files/Images/bg-content.png";
 import icon1 from "../../Files/Images/icon/1.png";
+import icon2 from "../../Files/Images/icon/2.png";
+import icon3 from "../../Files/Images/icon/3.png";
+import icon4 from "../../Files/Images/icon/4.png";
+import icon5 from "../../Files/Images/icon/5.png";
+import icon6 from "../../Files/Images/icon/6.png";
 import {
   Grid,
   CardMedia,
@@ -73,35 +78,35 @@ function OurHappyClient() {
             <Grid item sm={4} xs={6} md={6} lg={4} className={classes.grid1}>
               <CardMedia
                 component="img"
-                image={icon1}
+                image={icon2}
                 className={classes.icon}
               />
             </Grid>
             <Grid item sm={4} xs={6} md={6} lg={4} className={classes.grid1}>
               <CardMedia
                 component="img"
-                image={icon1}
+                image={icon3}
                 className={classes.icon}
               />
             </Grid>
             <Grid item sm={4} xs={6} md={6} lg={4} className={classes.grid1}>
               <CardMedia
                 component="img"
-                image={icon1}
+                image={icon4}
                 className={classes.icon}
               />
             </Grid>
             <Grid item sm={4} xs={6} md={6} lg={4} className={classes.grid1}>
               <CardMedia
                 component="img"
-                image={icon1}
+                image={icon5}
                 className={classes.icon}
               />
             </Grid>
             <Grid item sm={4} xs={6} md={6} lg={4} className={classes.grid1}>
               <CardMedia
                 component="img"
-                image={icon1}
+                image={icon6}
                 className={classes.icon}
               />
             </Grid>
