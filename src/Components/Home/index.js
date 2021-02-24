@@ -17,6 +17,7 @@ import Loading from "../General/Loading";
 import IconButton from "@material-ui/core/IconButton";
 import bannerLeft from "../../Files/Images/banner_left.png";
 import bannerRight from "../../Files/Images/banner_right.png";
+import MostSearched from "./MostSearched";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -30,11 +31,13 @@ const useStyles = makeStyles(theme => ({
   leftImg: {
     position: "fixed",
     left: 0,
+    zIndex: 10,
     top: 64,
     width: 60
   },
   rightImg: {
     position: "fixed",
+    zIndex: 10,
     right: 0,
     top: 64,
     width: 60
@@ -123,7 +126,7 @@ function Home() {
               enim ad minim veniam
             </Alert>
           </Collapse>
-
+          <MostSearched />
           <NewProduct />
           <BestSelling />
           <SpecialProduct />
