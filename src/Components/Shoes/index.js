@@ -68,7 +68,7 @@ function Shoes() {
   return (
     <React.Fragment>
       <Container maxWidth="lg">
-        <Box my={2}>
+        <Box mb={2}>
           <Grid container spacing={2}>
             <Grid item xs={12} lg={3}>
               <div className={classes.autoMb}>
