@@ -21,6 +21,7 @@ import Header from "./Header";
 import Rating from "@material-ui/lab/Rating";
 import SliderProduct from "../General/SliderProduct/index";
 import ServicesGeneral from "../General/Services";
+import BannerShop from "../General/BannerShop";
 
 const useStyles = makeStyles(theme => ({
   bg: {
@@ -59,6 +60,7 @@ function Accessories() {
   return (
     <React.Fragment>
       <Container maxWidth="lg">
+        <BannerShop />
         <Box my={2}>
           <Grid container spacing={2}>
             <Grid item xs={12} lg={3}>

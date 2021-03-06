@@ -1,6 +1,11 @@
 import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import user1 from "../../Files/Images/users/1.png";
+import user2 from "../../Files/Images/users/2.jpg";
+import user3 from "../../Files/Images/users/3.png";
+import user4 from "../../Files/Images/users/4.png";
+import user5 from "../../Files/Images/users/5.png";
+import user6 from "../../Files/Images/users/6.png";
 import { ProductConsumer } from "../../Context";
 import { Comments } from "../../Data/comments";
 import SendOutlinedIcon from "@material-ui/icons/SendOutlined";
@@ -25,6 +30,8 @@ const styles = theme => ({
     height: theme.spacing(7)
   }
 });
+
+const arrImg = [user1, user2, user3, user4, user5, user6];
 
 export const ColorButtonNormal = withStyles(theme => ({
   root: {
@@ -135,7 +142,7 @@ class PostComponents extends React.Component {
                       key={comment.id}
                     >
                       <Avatar
-                        src={user1}
+                        src={arrImg[Math.floor(Math.random() * arrImg.length)]}
                         alt="image1"
                         className={classes.avatar}
                       />

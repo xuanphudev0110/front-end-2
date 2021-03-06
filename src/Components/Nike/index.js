@@ -3,6 +3,7 @@ import { Container, Box } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import Product from "./Product";
 import SliderProduct from "../General/SliderProduct";
+import ServicesGeneral from "../General/Services";
 
 const useStyles = makeStyles(theme => ({
   autoMb: {
@@ -21,6 +22,7 @@ function Nike() {
           <Product />
         </Box>
         <SliderProduct />
+        <ServicesGeneral />
       </div>
     </Container>
   );

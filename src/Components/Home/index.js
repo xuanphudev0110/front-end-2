@@ -103,7 +103,10 @@ function Home() {
           <SliderAdvertisement />
           <Countdown deadline="Jul, 15, 2021" />
           <TypeProduct />
-          <Collapse in={open2}>
+          <Collapse
+            style={{ marginBottom: open2 === false ? 0 : 16 }}
+            in={open2}
+          >
             <Alert
               action={
                 <IconButton

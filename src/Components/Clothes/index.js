@@ -18,6 +18,7 @@ import Jean from "./Jean";
 import Filter from "./Filter";
 import FilterByStars from "./FilterByStars";
 import ServicesGeneral from "../General/Services";
+import BannerShop from "../General/BannerShop";
 
 const useStyles = makeStyles(theme => ({
   bg: {
@@ -68,6 +69,7 @@ function Clothes() {
   return (
     <React.Fragment>
       <Container maxWidth="lg">
+        <BannerShop />
         <Box my={2}>
           <Grid container spacing={2}>
             <Grid item xs={12} lg={3}>
