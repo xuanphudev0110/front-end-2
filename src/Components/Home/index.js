@@ -33,14 +33,20 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     zIndex: 10,
     top: 64,
-    width: 60
+    width: 60,
+    [theme.breakpoints.down("xs")]: {
+      display: "none"
+    }
   },
   rightImg: {
     position: "fixed",
     zIndex: 10,
     right: 0,
     top: 64,
-    width: 60
+    width: 60,
+    [theme.breakpoints.down("xs")]: {
+      display: "none"
+    }
   }
 }));
 
